@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Stats</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <main>
+        <div>
+            <section class="date-section">
+                <select id="daysSelect"></select>
+
+                <span id="date"></span>
+            </section>
+
+            <hr>
+
+            <h2>Principales lugares</h2>
+            <div class="chart-filter buttons">
+                <button class="filter-button filter-button-places selected" data-filter="cities">Ciudades</button>
+                <button class="filter-button filter-button-places" data-filter="countries">Países</button>
+            </div>
+        </div>
+
+        <div id="chart"></div>
+
+        <section class="seccion-edad">
+            <h2>Rango de edad</h2>
+            <div class="chart-filter buttons">
+                <button class="filter-button filter-button-gender selected" data-filter="all">Todos</button>
+                <button class="filter-button filter-button-gender" data-filter="Male">Hombres</button>
+                <button class="filter-button filter-button-gender" data-filter="Female">Mujeres</button>
+            </div>
+            <div id="chart2"></div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

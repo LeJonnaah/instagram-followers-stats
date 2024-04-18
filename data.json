@@ -1,0 +1,130 @@
+{
+    "days": {
+        "30": {
+            "countries": {
+                "USA": 30,
+                "Canada": 20,
+                "UK": 15,
+                "Germany": 10,
+                "France": 5
+            },
+            "cities": {
+                "New York": 40,
+                "Los Angeles": 30,
+                "Chicago": 20,
+                "Houston": 15,
+                "San Francisco": 10
+            },
+            "gender": {
+                "13-17": {
+                    "Male": 20,
+                    "Female": 15
+                },
+                "18-24": {
+                    "Male": 25,
+                    "Female": 20
+                },
+                "25-34": {
+                    "Male": 15,
+                    "Female": 10
+                },
+                "35-44": {
+                    "Male": 5,
+                    "Female": 0
+                },
+                "45-54": {
+                    "Male": 0,
+                    "Female": 0
+                },
+                "55-64": {
+                    "Male": 0,
+                    "Female": 0
+                }
+            }
+        },
+        "14": {
+            "countries": {
+                "USA": 25,
+                "Canada": 18,
+                "UK": 12,
+                "Germany": 8,
+                "France": 4
+            },
+            "cities": {
+                "New York": 35,
+                "Los Angeles": 25,
+                "Chicago": 15,
+                "Houston": 12,
+                "San Francisco": 8
+            },
+            "gender": {
+                "13-17": {
+                    "Male": 18,
+                    "Female": 12
+                },
+                "18-24": {
+                    "Male": 22,
+                    "Female": 17
+                },
+                "25-34": {
+                    "Male": 12,
+                    "Female": 8
+                },
+                "35-44": {
+                    "Male": 5,
+                    "Female": 0
+                },
+                "45-54": {
+                    "Male": 0,
+                    "Female": 0
+                },
+                "55-64": {
+                    "Male": 0,
+                    "Female": 0
+                }
+            }
+        },
+        "7": {
+            "countries": {
+                "USA": 20,
+                "Canada": 15,
+                "UK": 10,
+                "Germany": 6,
+                "France": 3
+            },
+            "cities": {
+                "New York": 30,
+                "Los Angeles": 20,
+                "Chicago": 10,
+                "Houston": 8,
+                "San Francisco": 5
+            },
+            "gender": {
+                "13-17": {
+                    "Male": 15,
+                    "Female": 10
+                },
+                "18-24": {
+                    "Male": 18,
+                    "Female": 13
+                },
+                "25-34": {
+                    "Male": 10,
+                    "Female": 6
+                },
+                "35-44": {
+                    "Male": 5,
+                    "Female": 0
+                },
+                "45-54": {
+                    "Male": 0,
+                    "Female": 0
+                },
+                "55-64": {
+                    "Male": 0,
+                    "Female": 0
+                }
+            }
+        }
+    }
+}

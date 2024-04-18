@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    letter-spacing: -0.7px;
+}
+
+main {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+hr {
+    color: #E2F0FF;
+}
+
+#chart {
+    margin-top: 20px;
+}
+
+.bar-container {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.date-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar {
+    /* Posición relativa para que los elementos secundarios estén posicionados relativamente a este */
+    background-color: #0093FB;
+    /* Color de las barras */
+    /* Color del texto dentro de las barras */
+    padding: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    /* Oculta el contenido que se desborda */
+    border-radius: 0px 10px 10px 0;
+    z-index: 999;
+}
+
+.bar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    min-width: 80vw;
+    z-index: -1;
+    left: 0;
+    height: 100%;
+    border-radius: 0px 10px 10px 0;
+    background-color: #EFEFEF;
+    /* Color de la transparencia */
+}
+
+.percentage {
+    position: absolute;
+    right: 5px;
+}
+
+.label {
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.gray-bar {
+    background-color: #EFEFEF;
+}
+
+#daysSelect {
+    background-color: #EFEFEF;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.filter-button.selected {
+    background-color: #E2F0FF;
+    color: #0B8CE4;
+}
+
+.buttons button {
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    background-color: #EFEFEF;
+    border-radius: 7px;
+    cursor: pointer;
+}
