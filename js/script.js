@@ -64,12 +64,44 @@ document.addEventListener('DOMContentLoaded', function() {
             }));
         }
 
+        // Obtener datos del género masculino por edad
+        const chartDataMale = [];
+        Object.entries(selectedDayData.gender).forEach(([age, genderData]) => {
+            chartDataMale.push({
+                age,
+                value: genderData.Male
+            });
+        });
+
+        // Obtener datos del género femenino por edad
+        const chartDataFemale = [];
+        Object.entries(selectedDayData.gender).forEach(([age, genderData]) => {
+            chartDataFemale.push({
+                age,
+                value: genderData.Female
+            });
+        });
+
         const selectedGenderFilter = document.querySelector('.filter-button-gender.selected');
         const filterValue = selectedGenderFilter ? selectedGenderFilter.getAttribute('data-filter') : 'all';
-        const chartDataGender = Object.entries(selectedDayData.gender).map(([age, genderData]) => ({
-            age,
-            value: genderData
-        }));
+        let chartDataGender;
+        if (filterValue === 'all') {
+            // Calcular el promedio de ambos géneros por edad
+            chartDataGender = [];
+            chartDataMale.forEach(maleItem => {
+                const femaleItem = chartDataFemale.find(femaleItem => femaleItem.age === maleItem.age);
+                if (femaleItem) {
+                    chartDataGender.push({
+                        age: maleItem.age,
+                        value: (maleItem.value + femaleItem.value) / 2
+                    });
+                }
+            });
+        } else if (filterValue === 'Male') {
+            chartDataGender = chartDataMale;
+        } else if (filterValue === 'Female') {
+            chartDataGender = chartDataFemale;
+        }
 
         renderChart(chartDataPlaces, 'chart', 'all', 'places');
         renderChart(chartDataGender, 'chart2', filterValue, 'gender');
@@ -111,15 +143,14 @@ function renderChart(data, chart, filterValue, filterType) {
 
         const percentage = document.createElement("div");
         percentage.classList.add("percentage");
-        percentage.textContent = filterType === 'places' ? `${item.value}%` : `${item.value.Male}% Male, ${item.value.Female}% Female`;
+        percentage.textContent = filterType === 'places' ? `${item.value}%` : `${item.value}%`;
         barContainer.appendChild(percentage);
 
         const bar = document.createElement("div");
         bar.classList.add("bar");
-        bar.style.width = filterType === 'places' ? `${item.value}%` : filterValue === 'male' ? `${item.value.Male}%` : `${item.value.Female}%`;
+        bar.style.width = `${item.value}%`;
         bar.setAttribute("data-age", item.age);
-        bar.setAttribute("data-male-value", `${item.value.Male}%`);
-        bar.setAttribute("data-female-value", `${item.value.Female}%`);
+        bar.setAttribute("data-male-value", `${item.value}%`);
 
         if (filterType === "age" && item.age === filterValue) {
             barContainer.classList.add("matching-bar");
