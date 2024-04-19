@@ -47,14 +47,14 @@ hr {
     margin-bottom: 5px;
     position: relative;
     border-radius: 0px 10px 10px 0;
-    max-width: 70vw;
+    max-width: 75vw;
 }
 
 .bar::after {
     content: "";
     position: absolute;
     top: 0;
-    min-width: 80vw;
+    min-width: 77vw;
     z-index: -1;
     left: 0;
     height: 100%;
@@ -66,7 +66,7 @@ hr {
 .percentage {
     position: absolute;
     right: 5px;
-    top:16px
+    top: 16px;
 }
 
 .label {
