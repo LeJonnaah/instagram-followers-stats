@@ -18,7 +18,7 @@ h2:nth-child(1) {
 }
 
 hr {
-    border: 1px solid #E2F0FF;
+    border: 1px solid #efefef;
     width: 100vw;
     padding: 0;
     position: relative;
@@ -42,7 +42,7 @@ hr {
 }
 
 .bar {
-    background-color: #0093FB;
+    background-color: #0394f0;
     padding: 4px;
     margin-bottom: 5px;
     position: relative;
@@ -58,7 +58,7 @@ hr {
     left: 0;
     height: 100%;
     border-radius: 0px 10px 10px 0;
-    background-color: #EFEFEF;
+    background-color: #efedf8;
     position: absolute;
 }
 
@@ -73,10 +73,6 @@ hr {
     margin-bottom: 5px;
     font-size: 14px;
     letter-spacing: 0.1px;
-}
-
-.gray-bar {
-    background-color: #EFEFEF;
 }
 
 #daysSelect {
@@ -96,8 +92,8 @@ hr {
 }
 
 .filter-button.selected {
-    background-color: #E2F0FF;
-    color: #0B8CE4;
+    background-color: #d9f4ff;
+    color: #2d92e0;
 }
 
 .buttons button {

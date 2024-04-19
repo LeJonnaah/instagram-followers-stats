@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let data; // Variable para almacenar los datos
+    let data;
 
     fetch('data.json')
     .then(response => response.json())
     .then(jsonData => {
-        data = jsonData; // Almacenar los datos para uso posterior
+        data = jsonData;
         const daysData = data.days;
         const daysSelect = document.getElementById('daysSelect');
         const days = Object.keys(daysData);
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Llamar a updateCharts() y updateDate() una vez que se hayan cargado los datos
         updateCharts();
         updateDate();
     });
@@ -64,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }));
         }
 
-        // Obtener datos del género masculino por edad
         const chartDataMale = [];
         Object.entries(selectedDayData.gender).forEach(([age, genderData]) => {
             chartDataMale.push({
@@ -73,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Obtener datos del género femenino por edad
         const chartDataFemale = [];
         Object.entries(selectedDayData.gender).forEach(([age, genderData]) => {
             chartDataFemale.push({
@@ -86,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const filterValue = selectedGenderFilter ? selectedGenderFilter.getAttribute('data-filter') : 'all';
         let chartDataGender;
         if (filterValue === 'all') {
-            // Calcular el promedio de ambos géneros por edad
             chartDataGender = [];
             chartDataMale.forEach(maleItem => {
                 const femaleItem = chartDataFemale.find(femaleItem => femaleItem.age === maleItem.age);
@@ -110,10 +106,10 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateDate() {
         const selectedDay = document.getElementById('daysSelect').value;
         const startDate = new Date();
-        startDate.setDate(startDate.getDate() - parseInt(selectedDay) + 1); // Incluyendo hoy
+        startDate.setDate(startDate.getDate() - parseInt(selectedDay) + 1);
 
         const endDate = new Date();
-        endDate.setDate(endDate.getDate() - 1); // Excluyendo hoy
+        endDate.setDate(endDate.getDate() - 1);
 
         const startDateFormatted = `${startDate.getDate()} ${getMonthShortName(startDate.getMonth())}.`;
         const endDateFormatted = `${endDate.getDate()} ${getMonthShortName(endDate.getMonth())}.`;
@@ -126,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return monthsShortNames[monthIndex];
     }
 });
-
 
 function renderChart(data, chart, filterValue, filterType) {
     const chartElement = document.getElementById(chart);
