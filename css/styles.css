@@ -101,7 +101,7 @@ hr {
 .buttons button {
     font-weight: bold;
     border: none;
-    padding: 10px;
+    padding: 8px;
     background-color: #EFEFEF;
     border-radius: 7px;
     cursor: pointer;
