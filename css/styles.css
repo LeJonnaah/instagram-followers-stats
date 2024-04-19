@@ -1,18 +1,26 @@
 body {
     font-family: Arial, sans-serif;
     letter-spacing: -0.7px;
+    margin: 0;
 }
 
 main {
     font-weight: bold;
+    padding: 10px;
 }
 
 h2 {
     font-size: 18px;
 }
 
+h2:nth-child(1) {
+    margin-top: 60px;
+}
+
 hr {
-    color: #E2F0FF;
+    border: 1px solid #E2F0FF;
+    width: 100vw;
+    padding: 0;
 }
 
 #chart {
@@ -31,14 +39,10 @@ hr {
 }
 
 .bar {
-    /* Posición relativa para que los elementos secundarios estén posicionados relativamente a este */
     background-color: #0093FB;
-    /* Color de las barras */
-    /* Color del texto dentro de las barras */
     padding: 4px;
     margin-bottom: 5px;
     position: relative;
-    /* Oculta el contenido que se desborda */
     border-radius: 0px 10px 10px 0;
 }
 
@@ -58,12 +62,14 @@ hr {
 .percentage {
     position: absolute;
     right: 5px;
+    top:16px
 }
 
 .label {
     font-weight: normal;
     margin-bottom: 5px;
     font-size: 15px;
+    letter-spacing: 0.1px;
 }
 
 .gray-bar {
@@ -74,6 +80,7 @@ hr {
     background-color: #EFEFEF;
     border: none;
     padding: 8px 15px;
+    padding-right: 0px;
     border-radius: 10px;
     font-weight: bold;
 }
