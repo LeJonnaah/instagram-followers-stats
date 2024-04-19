@@ -2,11 +2,11 @@
     "days": {
         "30": {
             "countries": {
-                "USA": 30,
-                "Canada": 20,
-                "UK": 15,
-                "Germany": 10,
-                "France": 5
+                "Estados Unidos": 30.2,
+                "Canada": 20.5,
+                "UK": 15.7,
+                "Germany": 10.1,
+                "France": 5.9
             },
             "cities": {
                 "New York": 40,
