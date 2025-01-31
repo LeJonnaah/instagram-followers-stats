@@ -154,7 +154,7 @@ hr {
     gap: 126%;
     margin: 0 53%;
     position: absolute;
-    bottom: 11em;
+    bottom: 10em;
     right: 1em;
     font-size: smaller;
     text-align: right;
@@ -237,4 +237,25 @@ hr {
 .day-button.selected {
     background-color: #ffffff;
     color: #25282d;
+}
+
+.date-section {
+    translate: 0px -40px;
+}
+
+.date-section__title {
+    translate: 0px -40px;
+}
+
+.separador {
+    border: 3px solid #232429;
+}
+
+.separador--1 {
+    translate: 0px 30px;
+    z-index: 100;
+}
+
+.separador--2 {
+    translate: 0px -90px;
 }
