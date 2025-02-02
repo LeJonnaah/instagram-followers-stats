@@ -51,8 +51,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const percentage1Value = document.getElementById('percentage1');
             const percentage2Value = document.getElementById('percentage2');
-            percentage1Value.innerHTML = `${percentage1}%<br><span class="percentage-text">Hombres</span>`;
-            percentage2Value.innerHTML = `${percentage2}%<br><span class="percentage-text">Mujeres</span>`;
+            percentage1Value.innerHTML = `<span class="percentage-left">${percentage1.toString().replace('.', ',')}%</span><br><span class="percentage-text">Hombres</span>`;
+            percentage2Value.innerHTML = `<span class="percentage-right">${percentage2.toString().replace('.', ',')}%</span><br><span class="percentage-text">Mujeres</span>`;
 
             if (percentage1 !== undefined && percentage2 !== undefined) {
                 pieChart.style.background = `

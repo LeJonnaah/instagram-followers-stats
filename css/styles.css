@@ -151,7 +151,7 @@ hr {
 
 .pie-chart figcaption {
     display: flex;
-    gap: 126%;
+    gap: 133%;
     margin: 0 53%;
     position: absolute;
     bottom: 10em;
@@ -160,14 +160,27 @@ hr {
     text-align: right;
 }
 
-.pie-chart .pie-color:after {
+.pie-chart .pie-color--left:after {
     display: inline-block;
     position: relative;
     bottom: 1.6em;
     right: -13px;
     content: "";
-    width: 0.7em;
-    height: 0.7em;
+    width: 0.6em;
+    height: 0.6em;
+    margin-left: 4px;
+    border-radius: 2em;
+    background: currentColor;
+}
+
+.pie-color--right::before {
+    display: inline-block;
+    position: relative;
+    bottom: 1.6em;
+    left: -55px;
+    content: "";
+    width: 0.6em;
+    height: 0.6em;
     margin-left: 4px;
     border-radius: 2em;
     background: currentColor;
@@ -243,7 +256,8 @@ hr {
 }
 
 .date-section__title {
-    translate: 0px -40px;
+    translate: 0px -20px;
+    margin: 0;
 }
 
 .separador {
@@ -257,4 +271,14 @@ hr {
 
 .separador--2 {
     translate: 0px -90px;
+}
+
+.percentage-left {
+    float: right;
+    translate: 15px;
+}
+
+.percentage-right {
+    float: left;
+    translate: -10px;
 }
